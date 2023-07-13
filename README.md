@@ -1,5 +1,3 @@
-# Poe API Bot tutorial
+# ImaGen bot.
 
-This is the companion repository to the Poe API bot
-[quick start](https://developer.poe.com/api-bots/quick-start). Please follow that guide
-for instructions on how to use this repository.
+Generates images given the prompt using OpenAI's Dall-E model. Available for use at: https://poe.com/ImaGen
