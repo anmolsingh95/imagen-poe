@@ -15,10 +15,10 @@ from modal import Image, Secret, Stub, asgi_app
 from imagen_bot import ImaGenBot
 
 image = Image.debian_slim().pip_install_from_requirements("requirements.txt")
-stub = Stub("imagen-poe")
+stub = Stub("imagen-poe-app")
 
 
-@stub.function(image=image, secret=Secret.from_name("imagen-poe"))
+@stub.function(image=image, secret=Secret.from_name("imagen-poe-secret"))
 @asgi_app()
 def fastapi_app():
     openai.api_key = os.environ["OPENAI_API_KEY"]
