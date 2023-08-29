@@ -1,8 +1,3 @@
-# Welcome to the Poe API tutorial. The starter code provided provides you with a quick way to get
-# a bot running. By default, the starter code uses the EchoBot, which is a simple bot that echos
-# a message back at its user and is a good starting point for your bot, but you can
-# comment/uncomment any of the following code to try out other example bots.
-
 import json
 import os
 
@@ -31,6 +26,5 @@ def fastapi_app():
         },
     )
     bot = ImaGenBot()
-    POE_API_KEY = os.environ["POE_API_KEY"]
-    app = make_app(bot, api_key=POE_API_KEY)
+    app = make_app(bot, access_key=os.environ["POE_ACCESS_KEY"])
     return app
